@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+        }
+
+        .headline {
+            font-family: Arial, sans-serif;
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in forwards;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 99vw;
+            height: auto;
+            background: #ccc;
+            overflow: hidden;
+            animation: loadImage 2s ease-in forwards,
+                      shake 0.1s 3s infinite alternate,
+                      suckIn 1.5s 0.05 ease-out forwards;
+            opacity: 0;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            background: url('https://via.placeholder.com/400x300?text=Classified+Image') center/cover;
+            filter: blur(15px);
+            animation: clarify 2s ease-in forwards;
+        }
+
+        .loading-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, -50%);
+            font-family: Arial, sans-serif;
+            font-size: 1.2em;
+            color: #fff;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            animation: flicker 0.5s infinite alternate;
+        }
+
+        .black-hole {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, #000 10%, #333 50%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 0.5s infinite alternate,
+                      growHole 1.5s 4s ease-out forwards;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes loadImage {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes clarify {
+            0% { filter: blur(15px); }
+            99% { filter: blur(40px); } /* Almost clear, but not quite */
+            100% { filter: blur(25px); }
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes shake {
+            0% { transform: translateX(-3px); }
+            100% { transform: translateX(3px); }
+        }
+
+        @keyframes suckIn {
+            0% {
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.1) rotate(90deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes growHole {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(40);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+            100% { box-shadow: 0 0 40px rgba(0, 0, 0, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="image-wrapper">
+        <div class="headline">Leaked Photo</div>
+            <div class="image"><img src="whoah.jpg"></div>
+            <div class="loading-text">Loading Classified JPG...</div>
+            <div class="black-hole"></div>
+        </div>
+    </div>
+</body>
+</html>

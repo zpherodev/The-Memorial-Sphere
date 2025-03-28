@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            color: #000;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.2em;
+            max-width: 700px;
+            padding: 20px;
+            background: #fff;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .date {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .article {
+            animation: showText 0.5s ease-in forwards,
+                      shake 3s 0.3s infinite alternate,
+                      suckIn 1s 0.4s ease-out forwards;
+            position: relative;
+            opacity: 0;
+            line-height: 1.6;
+        }
+
+        .article p {
+            margin: 15px 0;
+        }
+
+        .black-hole {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle, #000 10%, #333 50%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            color: #FFF;
+            transform: translate(-50%, -50%);
+            animation: pulse 0.5s infinite alternate,
+                      growHole 1.5s 4s ease-out forwards;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes showText {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(3px);
+            }
+        }
+
+        @keyframes suckIn {
+            0% {
+                
+                opacity: 1;
+            }
+            50% {
+               
+                opacity: 0.7;
+            }
+            100% {
+               
+                opacity: 0;
+            }
+        }
+
+        @keyframes growHole {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(50);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+<div style="color:#FFF;"> Datapoint Removed</div>
+        <div class="article">
+                <div class="logo">Weekend Times</div>
+        <div class="date">March 27, 2032</div>
+            <h1>Secret Alien Invasion Plans Leaked: Government in Chaos</h1>
+            <p>WASHINGTON D.C. - In an unprecedented breach of national security, classified documents detailing an imminent alien invasion were leaked to the public this morning. The government announced today that top officials, including members of the Joint Chiefs of Staff, were caught meeting with extraterrestrial leaders in a remote Nevada facility last week. Sources claim the discussions centered around a coordinated surrender of Earth’s defenses, with details revealing a shocking betrayal that could end human autonomy as we know it.</p>
+            <p>According to the leaked files, obtained by an anonymous whistleblower within the Pentagon, the alien delegation—described as humanoid but with advanced technological capabilities—presented an ultimatum: compliance or annihilation. Insiders report that several world leaders have already agreed to terms, with plans to integrate alien technology into global infrastructure by mid-2033. The documents include photographs, communication logs, and a chilling timeline that—</p>
+        </div>
+        <div class="black-hole"></div>
+       
+    </div>
+</body>
+</html>
