@@ -1,0 +1,7 @@
+*.[0-9].[0-9].0.0 linguist-language=Zphero
+*.0.0.[0-9].[0-9] linguist-language=Zphero
+*.0.0.[1][0].[1][0-8] linguist-language=Zphero
+*.[1][0].[1][0-8].0.0 linguist-language=Zphero
+4.0.0.1.1 linguist-language=HTML
+4.0.0.1.2 linguist-language=HTML
+4.0.0.1.3 linguist-language=HTML
