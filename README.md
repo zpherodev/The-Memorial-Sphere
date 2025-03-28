@@ -1,3 +1,4 @@
+<img src="https://spheredata.store/zphero-inter/ZPHEROLOGO3.png">
 # Zphero #4 The-Memorial-Sphere
 
 Zphero is opening up sphere #4 as part of its core system.
