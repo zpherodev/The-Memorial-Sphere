@@ -31,4 +31,4 @@ Read our Code of Conduct here: https://zphero.xyz/main/1.0.0.0.0.php?command=rul
 
 Get Project Status here: https://zphero.xyz/main/1.0.0.0.0.php?command=status
 
-WTF is zphero, in just a moment.
+WTF is zphero? https://zphero.xyz/main/1.0.0.0.0.php?command=about
